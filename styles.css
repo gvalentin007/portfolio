@@ -1,9 +1,9 @@
-body {font-family: "Veranda", sans-serif; background-color: turquoise;
-    background: turquoise;    
-    background: -webkit-linear-gradient(left top, turquoise, lightblue);
-    background: -o-linear-gradient(bottom right, turquoise, lightblue);
-    background: -moz-linear-gradient(bottom right, turquoise, lightblue);
-    background: linear-gradient(to bottom right, turquoise, lightblue);
+body {font-family: "Veranda", sans-serif;
+    background-color: turquoise;    
+    background-color: -webkit-linear-gradient(left top, turquoise, lightblue);
+    background-color: -o-linear-gradient(bottom right, turquoise, lightblue);
+    background-color: -moz-linear-gradient(bottom right, turquoise, lightblue);
+    background-color: linear-gradient(to bottom right, turquoise, lightblue);
 }
 
 h1 {
