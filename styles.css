@@ -1,6 +1,4 @@
-body {font-family: "Veranda", sans-serif;
-}
-#grad {
+grad {
     height: 200px;
     background: turquoise;  
     background: -webkit-linear-gradient(left, turquoise, white);
@@ -8,6 +6,9 @@ body {font-family: "Veranda", sans-serif;
     background: -moz-linear-gradient(right, turquoise, white);
     background: linear-gradient(to right, turquoise, white);
 }
+body {font-family: "Veranda", sans-serif;
+}
+
 h1 {
   text-shadow: 2px 2px #FFFFFF;
 }
