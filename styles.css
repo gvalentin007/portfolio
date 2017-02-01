@@ -4,6 +4,10 @@ body {font-family: "Veranda", sans-serif;
   background: -o-linear-gradient(right, #52bcb1, white);
   background: -moz-linear-gradient(right, #52bcb1, white);
   background: linear-gradient(to right, #52bcb1, white);
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
 }
 h1 {
   text-shadow: 2px 2px #375a6d;
