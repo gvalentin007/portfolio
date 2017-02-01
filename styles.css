@@ -1,8 +1,4 @@
 body {font-family: "Veranda", sans-serif; background-color: turquoise;
-  background: -webkit-linear-gradient(left, turquoise, white);
-  background: -o-linear-gradient(right, turquoise, white);
-  background: -moz-linear-gradient(right, turquoise, white);
-  background: linear-gradient(to right, turquoise, white);
 }
 h1 {
   text-shadow: 2px 2px #FFFFFF;
