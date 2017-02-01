@@ -3,4 +3,8 @@ body {background-color: turquoise; font-family: "Veranda", sans-serif;
 h1 {
   text-shadow: 2px 2px #FFFFFF;
 }
-
+p.solid {
+  border-style: 1px solid black;
+  border-width: 1px;
+  border-radius: 5px;
+}
