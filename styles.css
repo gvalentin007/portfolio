@@ -3,10 +3,4 @@ body {background-color: turquoise; font-family: "Veranda", sans-serif;
 h1 {
   text-shadow: 2px 2px #FFFFFF;
 }
-div {
-    background-color: #eee;
-    width: 5000px;
-    height: 100px;
-    border: 1px black;
-    overflow: scroll;
-}
+
