@@ -5,6 +5,5 @@ h1 {
 }
 p.solid {
   border-style: 1px solid black;
-  border-width: 1px;
   border-radius: 5px;
 }
