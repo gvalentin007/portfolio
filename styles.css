@@ -1,4 +1,4 @@
-body {font-family: "Veranda", sans-serif;
+body {font-family: "Veranda", sans-serif; background: turquoise;
     background: -webkit-linear-gradient(left, turquoise, lightblue);
     background: -o-linear-gradient(right, turquoise, lightblue);
     background: -moz-linear-gradient(right, turquoise, lightblue);
