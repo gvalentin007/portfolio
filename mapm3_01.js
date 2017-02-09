@@ -1,24 +1,18 @@
 function initialize() {
-	var crashboat = new google.maps.LatLng(35.084280,-106.624073)
-	var office = new google.maps.LatLng(35.084506,-106.624899)
+	var playuela = new google.maps.LatLng(17.935974,-67.188475)
 	var myOptions = {
 		zoom: 18,
-		center: classroom,
+		center: playuela,
 		mapTypeId: google.maps.MapTypeId.HYBRID
 		};
 	var map = new google.maps.Map(
 		document.getElementById("map_canvas"), 
 		myOptions);
 
-	var classroomMarker = new google.maps.Marker({
-		position: classroom,
+	var playuelaMarker = new google.maps.Marker({
+		position: playuela,
 		title:"Geography 485L/585L Classroom, Bandelier East, Room 106"
 		});
-	classroomMarker.setMap(map);
+	playuelaMarker.setMap(map);
 
-	var officeMarker = new google.maps.Marker({
-		position: office,
-		title:"Office, Bandelier West, Room 107"
-		});
-	officeMarker.setMap(map);
 }
