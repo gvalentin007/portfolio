@@ -1,5 +1,5 @@
 function initialize() {
-	var prcenter = new google.maps.LatLng(18.222090, -66.460588)
+	var prcenter = new google.maps.LatLng(18.226122, -66.374580)
 	var playuela = new google.maps.LatLng(17.935974, -67.188475)
 	var flamenco = new google.maps.LatLng(18.328375, -65.316861)
 	var sunbay = new google.maps.LatLng(18.097135, -65.461280)
