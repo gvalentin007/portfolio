@@ -11,7 +11,7 @@ function initialize() {
 
 	var playuelaMarker = new google.maps.Marker({
 		position: playuela,
-		title:"Geography 485L/585L Classroom, Bandelier East, Room 106"
+		title:"La Playuela Beach, Cabo Rojo, Puerto Rico"
 		});
 	playuelaMarker.setMap(map);
 
