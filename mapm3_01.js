@@ -1,7 +1,7 @@
 function initialize() {
 	var playuela = new google.maps.LatLng(17.935974,-67.188475)
 	var myOptions = {
-		zoom: 18,
+		zoom: 12,
 		center: playuela,
 		mapTypeId: google.maps.MapTypeId.HYBRID
 		};
