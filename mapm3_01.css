@@ -2,6 +2,8 @@ html {
 	height: 100% }
 
 body { 
+	height: 100%; 
+	
 	font-family: "Veranda", sans-serif;
   	background: turquoise;
  	background: -webkit-linear-gradient(left, #52bcb1, white);
@@ -14,11 +16,7 @@ body {
   	padding-bottom: 30px;
  	padding-left: 30px;
 	
-	height: 100%; 
-	margin: 0px; 
-	padding: 0px; 
-	background-color: #015366; 
-	color: #ffffff;
+	color: black;
 	text-align: center
 }
 	
