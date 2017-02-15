@@ -2,6 +2,18 @@ html {
 	height: 100% }
 
 body { 
+	font-family: "Veranda", sans-serif;
+  	background: turquoise;
+ 	background: -webkit-linear-gradient(left, #52bcb1, white);
+ 	background: -o-linear-gradient(right, #52bcb1, white);
+ 	background: -moz-linear-gradient(right, #52bcb1, white);
+ 	background: linear-gradient(to right, #52bcb1, white);
+  
+	padding-top: 30px;
+ 	padding-right: 30px;
+  	padding-bottom: 30px;
+ 	padding-left: 30px;
+	
 	height: 100%; 
 	margin: 0px; 
 	padding: 0px; 
