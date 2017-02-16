@@ -6,7 +6,7 @@ function initialize() {
 	var crashboat = new google.maps.LatLng(18.458587, -67.164352)
 	
 	var myOptions = {
-		zoom: 10,
+		zoom: 9,
 		center: prcenter,
 		mapTypeId: google.maps.MapTypeId.HYBRID
 		};
