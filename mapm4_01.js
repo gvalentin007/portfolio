@@ -14,6 +14,11 @@ function initialize() {
     "featureType": "administrative",
     "elementType": "geometry",
     "stylers": [
+[
+  {
+    "featureType": "administrative",
+    "elementType": "geometry",
+    "stylers": [
       {
         "visibility": "off"
       }
@@ -24,7 +29,7 @@ function initialize() {
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#d6d8d7"
+        "color": "#c3c3c3"
       }
     ]
   },
@@ -55,14 +60,26 @@ function initialize() {
     ]
   },
   {
+    "featureType": "road.arterial",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      },
+      {
+        "weight": 1.5
+      }
+    ]
+  },
+  {
     "featureType": "road.highway",
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#329292"
+        "color": "#327e92"
       },
       {
-        "weight": 1.5
+        "weight": 1
       }
     ]
   },
@@ -123,7 +140,6 @@ function initialize() {
     ]
   }
 ]
-};
 
 	var map = new google.maps.Map(
 		document.getElementById("map_canvas"), 
@@ -131,25 +147,32 @@ function initialize() {
 
 	var playuelaMarker = new google.maps.Marker({
 		position: playuela,
-		title:"La Playuela Beach, Cabo Rojo, Puerto Rico"
+		title:"La Playuela Beach, Cabo Rojo"
 		});
 	playuelaMarker.setMap(map);
 	
+	var infoWindow = new google.maps.InfoWindow({
+		content: "Playuela Beach, also known as Playa Sucia."
+	});
+	google.maps.event.addListener(marker, 'click', function(){
+		infoWindow.open(map, playuelaMarker);
+	});
+	
 	var flamencoMarker = new google.maps.Marker({
 		position: flamenco,
-		title:"Flamenco Beach, Culebra, Puerto Rico"
+		title:"Flamenco Beach, Culebra"
 		});
 	flamencoMarker.setMap(map);
 	
 	var sunbayMarker = new google.maps.Marker({
 		position: sunbay,
-		title:"Sun Bay Beach, Vieques, Puerto Rico"
+		title:"Sun Bay Beach, Vieques"
 		});
 	sunbayMarker.setMap(map);
 	
 	var crashboatMarker = new google.maps.Marker({
 		position: crashboat,
-		title:"Crash Boat Beach, Aguadilla, Puerto Rico"
+		title:"Crash Boat Beach, Aguadilla"
 		});
 	crashboatMarker.setMap(map);
 
