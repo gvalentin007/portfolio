@@ -16,8 +16,30 @@ h1 {
   text-align: center;
 }
 a:link {
-    color: #323e5d;
+  background: white;
+  color: #323e5d;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px #2b5556;
 }
 a:visited {
+  background: white;
   color: #604270
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px #2b5556;
+}
+
+#nav{
+	background-color: white;
+	
+#nav_wrapper{
+	width: 700px;
+	margin: 0 auto;
+	text-align: left;
+}
 }
