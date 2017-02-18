@@ -151,13 +151,6 @@ function initialize() {
 		});
 	playuelaMarker.setMap(map);
 	
-	var infoWindow = new google.maps.InfoWindow({
-		content: "Playuela Beach, also known as Playa Sucia."
-	});
-	google.maps.event.addListener(marker, 'click', function(){
-		infoWindow.open(map, playuelaMarker);
-	});
-	
 	var flamencoMarker = new google.maps.Marker({
 		position: flamenco,
 		title:"Flamenco Beach, Culebra"
@@ -176,4 +169,4 @@ function initialize() {
 		});
 	crashboatMarker.setMap(map);
 
-}
+};
