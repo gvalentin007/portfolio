@@ -8,12 +8,7 @@ function initialize() {
 	var marchiquita = new google.maps.LatLng(18.492285, -66.625923)
 	var gilligan = new google.maps.LatLng(17.942551, -66.873859)
 	
-	var myOptions = {
-		zoom: 9,
-		center: prcenter,
-		mapTypeId: google.maps.MapTypeId.HYBRID,
-		
-		// Googel style done at https://mapstyle.withgoogle.com/
+	// Googel style done at https://mapstyle.withgoogle.com/
 		styles: [
   {
     "featureType": "administrative.land_parcel",
@@ -293,19 +288,16 @@ function initialize() {
 	
 	// Fusion Table of GIS Beach Inventory based on 2010 high resolution imagery, by Gladys Valentin. 
 	
-	var playasippr = new google.maps.FusionTablesLayer({
-    query: {
-      select: '\'geometry\'',
-      from: '1D8PWC3fm95dzacweHanm72heyaDo6GyNRhZZpVad'
-    },
-	styles: [{
-      polygonOptions: {
-      fillOpacity: 0.50
-	  }
-	}]
-  });
-  playasippr.setMap(map);
-};
+	var layer = new google.maps.FusionTablesLayer({
+		query: {
+        select: '\'geometry\'',
+        from: "1D8PWC3fm95dzacweHanm72heyaDo6GyNRhZZpVad",
+      },
+	
+	});
+	layer.setMap(map);
+
+}
 
 
 
