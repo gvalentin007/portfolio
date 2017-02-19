@@ -8,7 +8,12 @@ function initialize() {
 	var marchiquita = new google.maps.LatLng(18.492285, -66.625923)
 	var gilligan = new google.maps.LatLng(17.942551, -66.873859)
 	
-	// Googel style done at https://mapstyle.withgoogle.com/
+	var myOptions = {
+		zoom: 9,
+		center: prcenter,
+		mapTypeId: google.maps.MapTypeId.HYBRID,
+		
+		// Googel style done at https://mapstyle.withgoogle.com/
 		styles: [
   {
     "featureType": "administrative.land_parcel",
@@ -286,28 +291,19 @@ function initialize() {
 		gilliganInfoWindow.open(map,gilliganMarker);
 	});
 	
-	// Fusion Table of GIS Beach Inventory based on 2010 high resolution imagery, by Gladys Valentin. 
-	
-	var layer = new google.maps.FusionTablesLayer({
-		query: {
+	 var layer = new google.maps.FusionTablesLayer({
+	query: {
+      map: map,
+      heatmap: { enabled: false },
+      query: {
         select: '\'geometry\'',
         from: "1D8PWC3fm95dzacweHanm72heyaDo6GyNRhZZpVad",
       },
-	
-	});
-	layer.setMap(map);
-
-}
-
-
-
-//<div class='googft-info-window'>
-//<b>ID:</b> {ID}<br>
-//<b>Municipio:</b> {Municipio}<br>
-//<b>area_sqm:</b> {area_sqm}<br>
-//<b>length_m:</b> {length_m}
-//<b>river_mouth:</b> {river_mouth}<br>
-//<b>beach_rock:</b> {beach_rock}<br>
-//<b>sand_cusps:</b> {sand_cusps}<br>
-//<b>man_made_structure:</b> {man_made_structure}<br>
-//</div>
+	},
+      options: {
+        styleId: 2,
+        templateId: 2
+      }
+    });
+  layer.setMap(map);
+};
