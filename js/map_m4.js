@@ -4,8 +4,8 @@ function initialize() {
 	var flamenco = new google.maps.LatLng(18.328375, -65.316861)
 	var sunbay = new google.maps.LatLng(18.097135, -65.461280)
 	var crashboat = new google.maps.LatLng(18.458587, -67.164352)
-	var escanbron = new google.maps.LatLng(18.467103, -66.625923)
-	var marchiquita = new google.maps.LatLng(18.492285, -66.090163)
+	var escanbron = new google.maps.LatLng(18.466825, -66.090601)
+	var marchiquita = new google.maps.LatLng(18.492285, -66.625923)
 	var gilligan = new google.maps.LatLng(17.942551, -66.873859)
 	
 	var myOptions = {
@@ -252,14 +252,15 @@ function initialize() {
 	var marchiquitaString = 
 		'<div id="bodyContent"> '+
 		'<p><b>Mar Chiquita Beach</b> '+
-        '_____________________________________ '+
+        ' is an oval-shaped cove in the municipality if Manati, '+
+		'on the north coast of Puerto Rico. '+
         '</div>';
 		
 	var marchiquitaMarker = new google.maps.Marker({
 		position: marchiquita,
 		title:"Mar Chiquita Beach, Manati"
 		});
-	escanbronMarker.setMap(map);
+	marchiquitaMarker.setMap(map);
 	
 	var marchiquitaInfoWindow = new google.maps.InfoWindow({
 		content: marchiquitaString
@@ -273,7 +274,8 @@ function initialize() {
 	var gilliganString =
 		'<div id="bodyContent"> '+
 		'<p><b>Gilligan Island</b> '+
-        '_____________________________________ '+
+        'is a paradisiac cay reached by boat off the coast of Guanica, '+
+		'southern Puerto Rico. </p>'+
         '</div>';
 		
 	var gilliganMarker = new google.maps.Marker({
