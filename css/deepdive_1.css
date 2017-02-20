@@ -24,7 +24,10 @@ body {
 	height:80%; 
 	margin:auto; 
 }
-	
+#notice {
+    color: red;
+}
+
 a:link {
     color: #323e5d;
 }
