@@ -312,9 +312,11 @@ function initialize() {
     },
 	styles: [{
       polygonOptions: {
-	  fillOpacity: 0.37
+	  fillColor: "#B8860B",
+	  fillOpacity: 0.40
 	  }
       }]
   });
   layer.setMap(map);
+//  google.maps.event.addDomListener(window, 'load', initialize);
 };
