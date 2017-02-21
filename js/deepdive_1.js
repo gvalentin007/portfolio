@@ -279,7 +279,7 @@ function initialize() {
         '</div>';
 		
 	var gilliganMarker = new google.maps.Marker({
-		position: guilligan,
+		position: gilligan,
 		title:"Gilligan Island, Guanica"
 		});
 	gilliganMarker.setMap(map);
@@ -291,19 +291,30 @@ function initialize() {
 		gilliganInfoWindow.open(map,gilliganMarker);
 	});
 	
-	 var layer = new google.maps.FusionTablesLayer({
-	query: {
-      map: map,
-      heatmap: { enabled: false },
-      query: {
-        select: '\'geometry\'',
-        from: "1D8PWC3fm95dzacweHanm72heyaDo6GyNRhZZpVad",
-      },
-	},
-      options: {
-        styleId: 2,
-        templateId: 2
-      }
-    });
+//	var layer = new google.maps.FusionTablesLayer({
+//		map: map,
+//		heatmap: { enabled: false },
+//		query: {
+ //       select: '\'geometry\'',
+//        from: "1D8PWC3fm95dzacweHanm72heyaDo6GyNRhZZpVad",
+//      },
+//		options: {
+//        styleId: 2,
+//        templateId: 2
+//      }
+//    });
+//  layer.setMap(map);
+
+	var layer = new google.maps.FusionTablesLayer({
+    query: {
+      select: '\'geometry\'',
+      from: '1D8PWC3fm95dzacweHanm72heyaDo6GyNRhZZpVad'
+    },
+	styles: [{
+      polygonOptions: {
+	  fillOpacity: 0.37
+	  }
+      }]
+  });
   layer.setMap(map);
 };

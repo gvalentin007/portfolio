@@ -279,7 +279,7 @@ function initialize() {
         '</div>';
 		
 	var gilliganMarker = new google.maps.Marker({
-		position: guilligan,
+		position: gilligan,
 		title:"Gilligan Island, Guanica"
 		});
 	gilliganMarker.setMap(map);
