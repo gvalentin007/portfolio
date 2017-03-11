@@ -7,6 +7,9 @@ function initialize() {
 	var escanbron = new google.maps.LatLng(18.466825, -66.090601)
 	var marchiquita = new google.maps.LatLng(18.492285, -66.625923)
 	var gilligan = new google.maps.LatLng(17.942551, -66.873859)
+	var playasanta = new google.maps.LatLng(17.938505, -66.955582)
+	var boqueron = new google.maps.LatLng(18.017733, -67.172261)
+	var domes = new google.maps.LatLng(18.364625, -67.269828)
 	
 	var myOptions = {
 		zoom: 9,
@@ -291,6 +294,79 @@ function initialize() {
 		gilliganInfoWindow.open(map,gilliganMarker);
 	});
 	
+	// Playa Santa infowindow, infowindow, marker, click function
+	
+	var playasantaString =
+		'<div id="bodyContent"> '+
+		'<p><b>Playa Santa</b> '+
+        'is located in the municipality of Guanica. Being in the south coast of Puerto Rico, '+
+		'it has clear tranquil waters. </p>'+
+        '</div>';
+		
+	var playasantaMarker = new google.maps.Marker({
+		position: playasanta,
+		title:"Playa Santa, Guanica"
+		});
+	playasantaMarker.setMap(map);
+	
+	var playasantaInfoWindow = new google.maps.InfoWindow({
+		content: playasantaString
+	});
+	google.maps.event.addListener(playasantaMarker, 'click', function() {
+		playasantaInfoWindow.open(map,playasantaMarker);
+	});
+	
+		
+	// Boqueron infowindow, infowindow, marker, click function
+	
+	var boqueronString =
+		'<div id="bodyContent"> '+
+		'<p><b>Boqueron Beach</b> '+
+        'is part of Boqueron Bay, on the west side of Cabo Rojo municipality. Enjoy beautiful sunsets from '+
+		'the sea-side villas available for rental. </p>'+
+        '</div>';
+		
+	var boqueronMarker = new google.maps.Marker({
+		position: boqueron,
+		title:"Boqueron Beach, Cabo Rojo"
+		});
+	boqueronMarker.setMap(map);
+	
+	var boqueronInfoWindow = new google.maps.InfoWindow({
+		content: boqueronString
+	});
+	google.maps.event.addListener(boqueronMarker, 'click', function() {
+		boqueronInfoWindow.open(map,boqueronMarker);
+	});
+	
+		
+	// Domes infowindow, infowindow, marker, click function
+
+	
+	var domesString =
+		'<div id="bodyContent"> '+
+		'<p><b>Domes Beach</b> '+
+        'gets its name from the nearby dome-shaped Old Nuclear Plant, now a museum, on the west side of Puerto Rico. '+
+		'The area is a hot spot for surfing enthusiasts. </p>'+
+        '</div>';
+		
+	var domesMarker = new google.maps.Marker({
+		position: domes,
+		title:"Domes Beach, Rincon"
+		});
+	domesMarker.setMap(map);
+	
+	var domesInfoWindow = new google.maps.InfoWindow({
+		content: domesString
+	});
+	google.maps.event.addListener(domesMarker, 'click', function() {
+		domesInfoWindow.open(map,domesMarker);
+	});
+	
+		
+	
+// Fusion Table Trial 1	
+
 //	var layer = new google.maps.FusionTablesLayer({
 //		map: map,
 //		heatmap: { enabled: false },
@@ -304,6 +380,9 @@ function initialize() {
 //      }
 //    });
 //  layer.setMap(map);
+
+
+// Fusion Table Trial 2
 
 	var layer = new google.maps.FusionTablesLayer({
     query: {
