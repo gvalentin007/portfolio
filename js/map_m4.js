@@ -236,7 +236,7 @@ function initialize() {
 		
 	var escanbronMarker = new google.maps.Marker({
 		position: escanbron,
-		title:"Escanbrón Beach, San Juan"
+		title:"Escanbron Beach, San Juan"
 		});
 	escanbronMarker.setMap(map);
 	
