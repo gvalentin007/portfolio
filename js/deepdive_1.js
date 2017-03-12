@@ -191,7 +191,7 @@ function initialize() {
         'is known for its beautiful white sands ' +
         'and clear waters. It is located in the island-municipality '+
         'of Culebra, Puerto Rico. '+
-		'<p><img src="img/gjvg_flamenco.JPG" alt="Culebra, PR" style="width:600px;height:400px;"></p> '+
+		'<p><img src="img/gjvg_flamenco.jpg" alt="Vieques, PR" style="width:600px;height:400px;"></p> '+
 		'<p> ^ Photo by GValentin </p>' +
 		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197129464!6m8!1m7!1sF%3A-X3UGCqPVAF4%2FVZs4K7Fa0LI%2FAAAAAAAAYVU%2Fz0Jz6dCh7VEjLCgJhPylI07_ZP2AqkiHwCJkC!2m2!1d18.3287121!2d-65.3179261!3f332.3261668854815!4f6.854291173702492!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
@@ -314,7 +314,7 @@ function initialize() {
 		'<p><b>Gilligan Island</b> '+
         'is a paradisiac cay reached by boat off the coast of Guanica, '+
 		'southern Puerto Rico. </p>'+
-		'<p><img src="img/gjvg_gilligan.JPG" alt="Guanica, PR" style="width:600px;height:400px;"></p> '+
+		'<p><img src="img/gjvg_gilligan.jpg" alt="Guanica, PR" style="width:600px;height:400px;"></p> '+
 		'<p> ^ Photo by GValentin </p>' +
 		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197673739!6m8!1m7!1sF%3A-8ycCP4u6C3g%2FV_qZNCowPaI%2FAAAAAAAAAkU%2F35kdq1tQDjg29peUGrrI8DCzYnvcY1B5gCJkC!2m2!1d17.9422047!2d-66.874408!3f27.48756790729102!4f2.304682543589479!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
