@@ -1,3 +1,5 @@
+<!--Deep Dive 1 HTML Trial 2 -->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,35 +22,34 @@
 
 	</style>
 	-->
-
+	
 	<body>
 		<h2>Deep Dive 1</h2>
 		<h1>Sub-aerial Beach Inventory of Puerto Rico</h1>
-				
+						
 		<p><a href="index_styled.html">Home</a></p>
 		
-		<p id="notice"> <b> TECHNICAL DIFFICULTIES </b> <br>
-		The info windows are not displaying the information as I set them up to. <br>
-		In the mean time, you can see how they should look <a href="https://goo.gl/HGmIwx">here</a>.
-		</p>
-		
+				
 		<p> Sub-aerial beaches are defined as deposits of unconsolidated sediments, including sand or gravel, extending from permanent physiographic features <br>
-		landward (vegetation, dunes and/or man-made structures)	to the high water level. This map presents a the sub-aerial beach inventory <br>
+		landward (vegetation, dunes and/or man-made structures)	to the high water level. This map presents a sub-aerial beach inventory <br>
 		I created during my undergraduate studies at the University of Puerto Rico, using ArcGIS 10.1 through interpretation of high-resulotuion imagery collected in 2010. <br>
 		Characteristics such as beach area, length, presence of beachrock and other barriers, river mouths, and adjacent structures were added to the attribute table. <br>
-		Results showed that ArcGIS succeeded as a tool for coastal studies of this nature, allowing designing and executing a comprehensive inventory, based on features <br>
-		and their multiple attributes. A total of 1,225 sub-aerial beaches were identified in Puerto Rico mainland, Vieques and Culebra island-municipalities, <br>
+		A total of 1,225 sub-aerial beaches were identified in Puerto Rico mainland, Vieques and Culebra island-municipalities, <br>
 		and Caja de Muertos Island. This beach inventory represents the first detailed geographic database of beaches in Puerto Rico, which can be updated and <br>
 		could serve to monitor morphological changes and data relevant to coastal studies.
 		</p>
 		
-		<p> I chose to display this shapefile for our Deep Dive 1 to learn how to integrate spatial data using Google Fusion Tables <br>
-		on Google API maps. In this map I used a hybrid basemap, so that the audience can visualize the beach systems through the satellite image, <br>
-		and also be able to see the road network and places of interest near them. This map also includes the markers created for <a href="map_m4.html">Milestone 4</a>, <br>
-		as well as a few additional beach locations, to show some of the best beaches in the Island vis a vis beach boundaries from the inventory. 
+		<p> <b> Zoom in </b> to any of the arrow markers and you will see golden-colored polygons representing the boundaries of sub-aerial beaches. <br>
+		These can be found along along most of the coast of Puerto Rico and municipality-islands. <b> Click the markers and polygons </b> to find out more about the beaches, <br>
+		which I consider some of the best in Puerto Rico.</p>
+		
+		<p id="notice"> <b> InfoWindows error </b> <br> </p>
+		<p>The info windows are not displaying the information as I set them up to. <br>
+		In the mean time, you can see how they should look <a href="https://goo.gl/HGmIwx">here</a>.
 		</p>
 		
-		<p> Zoom in on any section of coast and you will see golden-colored polygons representing the boundaries of sub-aerial beaches. </p>
+		<div id="map_canvas"></div>		
+				
 		
 		<p> <b> Note that </b> the digitization of beach structures was based on the interpretation of imagery that is not the one displayed in this map. <br>
 		Thus, the beach polygons may not coincide with the imagery or basemaps provided in the map, and may appear to be misplaced. That said, you will be able <br>
@@ -57,11 +58,15 @@
 		This change occurs all throughout the year. But some beaches are suffering erosion without recovery, especially in areas with adjacent human develompent.
 		</p>
 		
-			
-		<div id="map_canvas"></div>
-
-		<script src="js/deepdive_1.js"></script>
+		<p> I chose to display this shapefile for our Deep Dive 1 to learn how to integrate spatial data using Google Fusion Tables <br>
+		on Google API maps. In this map I used a hybrid basemap, so that the audience can visualize the beach systems through the satellite image, <br>
+		and also be able to see the road network and places of interest near them. This map also includes the markers created for <a href="map_m4.html">Milestone 4</a>, <br>
+		as well as a few additional beach locations, to show some of the best beaches in the Island vis a vis beach boundaries from the inventory. 
+		</p>
 		
+		<img src="img/gjvg_pr.jpg" alt="San Juan, PR" style="width:800px;height:400px;">
+				
+		<script src="js/deepdive_1.js"></script>
 		<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initialize&key=AIzaSyC_NzyS26gMjp7Ei3uy5vdL1ulEQKri9Vo">
     	</script>
 	</body>
