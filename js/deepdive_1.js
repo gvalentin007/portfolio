@@ -157,7 +157,7 @@ function initialize() {
         'also known as Playa Sucia, is located ' +
         'in the municipality of Cabo Rojo, Puerto Rico, near the '+
         'Cabo Rojo Lighthouse and Las Salinas. '+
-		'<p><img src="img/gjvg_1769.JPG" alt="San Juan, PR" style="width:600px;height:400px;"></p> '+
+		'<p><img src="img/gjvg_1769.JPG" alt="Cabo Rojo, PR" style="width:600px;height:400px;"></p> '+
 		'<p> ^ Photo by GValentin </p>' +
 		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197026014!6m8!1m7!1sF%3A-ij8GnJegoXA%2FU1awi9Q_InI%2FAAAAAAAAPME%2FbN4wOhPZQb8j2LOQ8p-GoWLOBhRzgpBjgCJkC!2m2!1d17.93381311335361!2d-67.19082730886248!3f47.11638411099733!4f3.6976009951606983!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
 		
@@ -191,6 +191,8 @@ function initialize() {
         'is known for its beautiful white sands ' +
         'and clear waters. It is located in the island-municipality '+
         'of Culebra, Puerto Rico. '+
+		'<p><img src="img/gjvg_flamenco.JPG" alt="Culebra, PR" style="width:600px;height:400px;"></p> '+
+		'<p> ^ Photo by GValentin </p>' +
 		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197129464!6m8!1m7!1sF%3A-X3UGCqPVAF4%2FVZs4K7Fa0LI%2FAAAAAAAAYVU%2Fz0Jz6dCh7VEjLCgJhPylI07_ZP2AqkiHwCJkC!2m2!1d18.3287121!2d-65.3179261!3f332.3261668854815!4f6.854291173702492!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
 		
@@ -215,7 +217,7 @@ function initialize() {
 		'<p><b>Sun Bay Beach</b> '+
         'is located on the south coast of the island-municipality of Vieques, ' +
         'walking distance from the Puerto Mosquito Bioluminicent Bay.'+
-		'<p><img src="img/gjvg_sunbay.JPG" alt="San Juan, PR" style="width:600px;height:400px;"></p> '+
+		'<p><img src="img/gjvg_sunbay.JPG" alt="Vieques, PR" style="width:600px;height:400px;"></p> '+
 		'<p> ^ Photo by GValentin </p>' +
 		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197359467!6m8!1m7!1sF%3A-6wE9VRCXSbg%2FU80K54NSQJI%2FAAAAAAAAd8U%2Ff065LC6soSYZcgccIxd8WHf53A--nXUVQCJkC!2m2!1d18.092161!2d-65.468116!3f25.4270207941735!4f4.727712386877869!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
@@ -312,6 +314,8 @@ function initialize() {
 		'<p><b>Gilligan Island</b> '+
         'is a paradisiac cay reached by boat off the coast of Guanica, '+
 		'southern Puerto Rico. </p>'+
+		'<p><img src="img/gjvg_gilligan.JPG" alt="Guanica, PR" style="width:600px;height:400px;"></p> '+
+		'<p> ^ Photo by GValentin </p>' +
 		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197673739!6m8!1m7!1sF%3A-8ycCP4u6C3g%2FV_qZNCowPaI%2FAAAAAAAAAkU%2F35kdq1tQDjg29peUGrrI8DCzYnvcY1B5gCJkC!2m2!1d17.9422047!2d-66.874408!3f27.48756790729102!4f2.304682543589479!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
 		
@@ -379,7 +383,7 @@ function initialize() {
 	});
 	
 		
-	// Domes infowindow, infowindow, marker, click function
+	// Domes infoWindow, infowindow, marker, click function
 
 	
 	var domesString =
