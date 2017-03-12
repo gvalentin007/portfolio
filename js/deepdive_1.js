@@ -1,4 +1,5 @@
 function initialize() {
+	//Beaches
 	var prcenter = new google.maps.LatLng(18.226122, -66.374580)
 	var playuela = new google.maps.LatLng(17.935974, -67.188475)
 	var flamenco = new google.maps.LatLng(18.328375, -65.316861)
@@ -11,6 +12,11 @@ function initialize() {
 	var boqueron = new google.maps.LatLng(18.017733, -67.172261)
 	var domes = new google.maps.LatLng(18.364625, -67.269828)
 	
+	//Photos
+	//var playuelapic new google.maps.LatLng(17.933848, -67.187338)
+	
+	
+	http://maps.google.com/mapfiles/kml/shapes/cross-hairs_highlight.png
 	var myOptions = {
 		zoom: 9,
 		center: prcenter,
@@ -137,6 +143,11 @@ function initialize() {
 	var map = new google.maps.Map(
 		document.getElementById("map_canvas"), 
 		myOptions);
+		
+	var arrow = {
+		url: 'http://earth.google.com/images/kml-icons/track-directional/track-8.png',
+		scaleSize: new google.maps.Size(50, 50)
+	};
 	
 	// Playuela infoWindow content, infoWindow, marker, click function
 				
@@ -146,7 +157,16 @@ function initialize() {
         'also known as Playa Sucia, is located ' +
         'in the municipality of Cabo Rojo, Puerto Rico, near the '+
         'Cabo Rojo Lighthouse and Las Salinas. '+
-        '</div>';						
+		'<p><img src="img/gjvg_1769.jpg" alt="San Juan, PR" style="width:600px;height:400px;"></p> '+
+		'<p> ^ Photo by GValentin </p>' +
+		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197026014!6m8!1m7!1sF%3A-ij8GnJegoXA%2FU1awi9Q_InI%2FAAAAAAAAPME%2FbN4wOhPZQb8j2LOQ8p-GoWLOBhRzgpBjgCJkC!2m2!1d17.93381311335361!2d-67.19082730886248!3f47.11638411099733!4f3.6976009951606983!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
+		
+		//InfoWindow image trials:
+		//'<p><img height="200" width="300" src="{https://drive.google.com/file/d/0B90BW-oT_w3KV2xJMmpYWG4xM1E/view?usp=sharing}"></p> '+
+		//'<img height="200" width="100" src="{img/gjvg_pr}"> '+
+		//'<img src="http://maps.googleapis.com/maps/api/streetview?size=400x400&location={17.935974},%20{-67.18847}&sensor=false&key=AIzaSyC_NzyS26gMjp7Ei3uy5vdL1ulEQKri9Vo" /> '+	
+		'</div>' 
+		
 		
 	var playuelaInfoWindow = new google.maps.InfoWindow({
 		content: playuelaString
@@ -154,7 +174,8 @@ function initialize() {
 	
 	var playuelaMarker = new google.maps.Marker({
 		position: playuela,
-		title:"La Playuela Beach, Cabo Rojo"
+		title:"La Playuela Beach, Cabo Rojo",
+		icon: arrow
 		});
 	playuelaMarker.setMap(map);
 	
@@ -170,11 +191,13 @@ function initialize() {
         'is known for its beautiful white sands ' +
         'and clear waters. It is located in the island-municipality '+
         'of Culebra, Puerto Rico. '+
+		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197129464!6m8!1m7!1sF%3A-X3UGCqPVAF4%2FVZs4K7Fa0LI%2FAAAAAAAAYVU%2Fz0Jz6dCh7VEjLCgJhPylI07_ZP2AqkiHwCJkC!2m2!1d18.3287121!2d-65.3179261!3f332.3261668854815!4f6.854291173702492!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
 		
 	var flamencoMarker = new google.maps.Marker({
 		position: flamenco,
-		title:"Flamenco Beach, Culebra"
+		title:"Flamenco Beach, Culebra",
+		icon: arrow
 		});
 	flamencoMarker.setMap(map);
 	
@@ -192,11 +215,15 @@ function initialize() {
 		'<p><b>Sun Bay Beach</b> '+
         'is located on the south coast of the island-municipality of Vieques, ' +
         'walking distance from the Puerto Mosquito Bioluminicent Bay.'+
+		'<p><img src="img/gjvg_sunbay.jpg" alt="San Juan, PR" style="width:600px;height:400px;"></p> '+
+		'<p> ^ Photo by GValentin </p>' +
+		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197359467!6m8!1m7!1sF%3A-6wE9VRCXSbg%2FU80K54NSQJI%2FAAAAAAAAd8U%2Ff065LC6soSYZcgccIxd8WHf53A--nXUVQCJkC!2m2!1d18.092161!2d-65.468116!3f25.4270207941735!4f4.727712386877869!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
 		
 	var sunbayMarker = new google.maps.Marker({
 		position: sunbay,
-		title:"Sun Bay Beach, Vieques"
+		title:"Sun Bay Beach, Vieques",
+		icon: arrow
 		});
 	sunbayMarker.setMap(map);
 	
@@ -214,11 +241,13 @@ function initialize() {
 		'<p><b>Crash Boat Beach</b> '+
         'gets its name from the remnants of a ship wreck near by. '+
 		'It is located in the Aguadilla municipality, west coast of Puerto Rico. '+
+		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489196776024!6m8!1m7!1sF%3A-fbyzKIMflek%2FVCcjhZt2wrI%2FAAAAAAAAAEQ%2FfZQ4MNJC0Tw1goKGWQTJScsVzciCaSJoACJkC!2m2!1d18.4589996!2d-67.1644592!3f270.41832115807534!4f11.045463271591146!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
 		
 	var crashboatMarker = new google.maps.Marker({
 		position: crashboat,
-		title:"Crash Boat Beach, Aguadilla"
+		title:"Crash Boat Beach, Aguadilla",
+		icon: arrow
 		});
 	crashboatMarker.setMap(map);
 	
@@ -235,11 +264,13 @@ function initialize() {
 		'<div id="bodyContent"> '+
 		'<p><b>Escanbron Beach</b> '+
         'is located in the historic Isleta de San Juan, Puerto Rico. '+
+		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197469693!6m8!1m7!1sF%3A-1946WPYZvHM%2FWIZ8kO3ISCI%2FAAAAAAAA1dM%2F_FIbvWv6z5YvQ0QwN1zFl8p_MqiuEXwrQCLIB!2m2!1d18.4668835!2d-66.0900351!3f264.9458395523834!4f17.565428909627812!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
 		
 	var escanbronMarker = new google.maps.Marker({
 		position: escanbron,
-		title:"Escanbrón Beach, San Juan"
+		title:"Escanbron Beach, San Juan",
+		icon: arrow
 		});
 	escanbronMarker.setMap(map);
 	
@@ -257,11 +288,13 @@ function initialize() {
 		'<p><b>Mar Chiquita Beach</b> '+
         ' is an oval-shaped cove in the municipality if Manati, '+
 		'on the north coast of Puerto Rico. '+
+		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197611075!6m8!1m7!1sF%3A-Ei5glFahPw8%2FVsEsjoTqi4I%2FAAAAAAABeAQ%2FpucKGSWY4TMl2Rllv2EFlk8IUsM-ZJBywCJkC!2m2!1d18.4735686!2d-66.48399049999999!3f132.7133585803195!4f-5.21705939713938!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
 		
 	var marchiquitaMarker = new google.maps.Marker({
 		position: marchiquita,
-		title:"Mar Chiquita Beach, Manati"
+		title:"Mar Chiquita Beach, Manati",
+		icon: arrow
 		});
 	marchiquitaMarker.setMap(map);
 	
@@ -279,11 +312,13 @@ function initialize() {
 		'<p><b>Gilligan Island</b> '+
         'is a paradisiac cay reached by boat off the coast of Guanica, '+
 		'southern Puerto Rico. </p>'+
+		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197673739!6m8!1m7!1sF%3A-8ycCP4u6C3g%2FV_qZNCowPaI%2FAAAAAAAAAkU%2F35kdq1tQDjg29peUGrrI8DCzYnvcY1B5gCJkC!2m2!1d17.9422047!2d-66.874408!3f27.48756790729102!4f2.304682543589479!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
 		
 	var gilliganMarker = new google.maps.Marker({
 		position: gilligan,
-		title:"Gilligan Island, Guanica"
+		title:"Gilligan Island, Guanica",
+		icon: arrow
 		});
 	gilliganMarker.setMap(map);
 	
@@ -301,11 +336,13 @@ function initialize() {
 		'<p><b>Playa Santa</b> '+
         'is located in the municipality of Guanica. Being in the south coast of Puerto Rico, '+
 		'it has clear tranquil waters. </p>'+
+		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197885335!6m8!1m7!1sF%3A-gVme_7srlSo%2FVoqFXvrooNI%2FAAAAAAAAMto%2FJ-S2O5NPZaYprprIZkp5kpo3MwwGygppgCLIB!2m2!1d17.9383009!2d-66.955473!3f158.02857953149638!4f11.997390390736385!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
 		
 	var playasantaMarker = new google.maps.Marker({
 		position: playasanta,
-		title:"Playa Santa, Guanica"
+		title:"Playa Santa, Guanica",
+		icon: arrow
 		});
 	playasantaMarker.setMap(map);
 	
@@ -324,11 +361,13 @@ function initialize() {
 		'<p><b>Boqueron Beach</b> '+
         'is part of Boqueron Bay, on the west side of Cabo Rojo municipality. Enjoy beautiful sunsets from '+
 		'the sea-side villas available for rental. </p>'+
+		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489198084184!6m8!1m7!1sLCKjN5gVphzUNWrqI-ludQ!2m2!1d18.01771116579263!2d-67.17222502317327!3f248.1516257595933!4f-6.204121333661064!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
 		
 	var boqueronMarker = new google.maps.Marker({
 		position: boqueron,
-		title:"Boqueron Beach, Cabo Rojo"
+		title:"Boqueron Beach, Cabo Rojo",
+		icon: arrow
 		});
 	boqueronMarker.setMap(map);
 	
@@ -348,11 +387,13 @@ function initialize() {
 		'<p><b>Domes Beach</b> '+
         'gets its name from the nearby dome-shaped Old Nuclear Plant, now a museum, on the west side of Puerto Rico. '+
 		'The area is a hot spot for surfing enthusiasts. </p>'+
+		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489196597540!6m8!1m7!1sF%3A-VtmC-8R66FM%2FU1M3C7sqiZI%2FAAAAAAAAJV4%2FfMNZ-OVkkgA-LMg9R5FX9ECDQ6-1kSrhQCLIB!2m2!1d18.3642389!2d-67.2700478!3f180.07300270211883!4f-0.15603333815478493!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe><p/> ' +
         '</div>';
 		
 	var domesMarker = new google.maps.Marker({
 		position: domes,
-		title:"Domes Beach, Rincon"
+		title:"Domes Beach, Rincon",
+		icon: arrow
 		});
 	domesMarker.setMap(map);
 	
@@ -397,5 +438,5 @@ function initialize() {
       }]
   });
   layer.setMap(map);
-//  google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
 };
