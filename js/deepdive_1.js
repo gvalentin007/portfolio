@@ -157,7 +157,7 @@ function initialize() {
         'also known as Playa Sucia, is located ' +
         'in the municipality of Cabo Rojo, Puerto Rico, near the '+
         'Cabo Rojo Lighthouse and Las Salinas. '+
-		'<p><img src="img/gjvg_1769.jpg" alt="San Juan, PR" style="width:600px;height:400px;"></p> '+
+		'<p><img src="img/gjvg_1769.JPG" alt="San Juan, PR" style="width:600px;height:400px;"></p> '+
 		'<p> ^ Photo by GValentin </p>' +
 		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197026014!6m8!1m7!1sF%3A-ij8GnJegoXA%2FU1awi9Q_InI%2FAAAAAAAAPME%2FbN4wOhPZQb8j2LOQ8p-GoWLOBhRzgpBjgCJkC!2m2!1d17.93381311335361!2d-67.19082730886248!3f47.11638411099733!4f3.6976009951606983!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
 		
@@ -215,7 +215,7 @@ function initialize() {
 		'<p><b>Sun Bay Beach</b> '+
         'is located on the south coast of the island-municipality of Vieques, ' +
         'walking distance from the Puerto Mosquito Bioluminicent Bay.'+
-		'<p><img src="img/gjvg_sunbay.jpg" alt="San Juan, PR" style="width:600px;height:400px;"></p> '+
+		'<p><img src="img/gjvg_sunbay.JPG" alt="San Juan, PR" style="width:600px;height:400px;"></p> '+
 		'<p> ^ Photo by GValentin </p>' +
 		'<p><iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1489197359467!6m8!1m7!1sF%3A-6wE9VRCXSbg%2FU80K54NSQJI%2FAAAAAAAAd8U%2Ff065LC6soSYZcgccIxd8WHf53A--nXUVQCJkC!2m2!1d18.092161!2d-65.468116!3f25.4270207941735!4f4.727712386877869!5f0.7820865974627469" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></p> '+
         '</div>';
