@@ -12,11 +12,12 @@ function initialize() {
 	var boqueron = new google.maps.LatLng(18.017733, -67.172261)
 	var domes = new google.maps.LatLng(18.364625, -67.269828)
 	
+	//Additional markes - Trial 1 - In progress
 	//Photos
 	//var playuelapic new google.maps.LatLng(17.933848, -67.187338)
+	//http://maps.google.com/mapfiles/kml/shapes/cross-hairs_highlight.png
 	
-	
-	http://maps.google.com/mapfiles/kml/shapes/cross-hairs_highlight.png
+		
 	var myOptions = {
 		zoom: 9,
 		center: prcenter,
@@ -410,7 +411,7 @@ function initialize() {
 	
 		
 	
-// Fusion Table Trial 1	
+// Fusion Table Trial 1: Does not work
 
 //	var layer = new google.maps.FusionTablesLayer({
 //		map: map,
@@ -425,9 +426,12 @@ function initialize() {
 //      }
 //    });
 //  layer.setMap(map);
+//google.maps.event.addDomListener(window, 'load', initialize);
+//};
 
 
-// Fusion Table Trial 2
+
+// Fusion Table Trial 2: Works
 
 	var layer = new google.maps.FusionTablesLayer({
     query: {
