@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/deepdive_1.css">
+	</head>
+	
+	<!-- Adding infoWindow specifications on HTML: Trial 1
+	<style>
+	
+	<div class='googft-info-window'>
+	<b>ID:</b> {ID}<br>
+	<b>Municipio:</b> {Municipio}<br>
+	<b>River mouth:</b> {River mouth}<br>
+	<b>Beach rock:</b> {Beach rock}<br>
+	<b>Sand cusps:</b> {Sand cusps}<br>
+	<b>Man-made structures:</b> {Man-made structures}<br>
+	<b>Area (Square meters):</b> {Area (Square meters)}<br>
+	<b>Length (meters):</b> {Length (meters)}
+	</div>
+
+	</style>
+	-->
+	
+	<body>
+		<h2>Deep Dive 1</h2>
+		<h1>Sub-aerial Beach Inventory of Puerto Rico</h1>
+						
+		<p><a href="index_styled.html">Home</a></p>
+		
+				
+		<p> Sub-aerial beaches are defined as deposits of unconsolidated sediments, including sand or gravel, extending from permanent physiographic features <br>
+		landward (vegetation, dunes and/or man-made structures)	to the high water level. This map presents a sub-aerial beach inventory <br>
+		I created during my undergraduate studies at the University of Puerto Rico, using ArcGIS 10.1 through interpretation of high-resulotuion imagery collected in 2010. <br>
+		Characteristics such as beach area, length, presence of beachrock and other barriers, river mouths, and adjacent structures were added to the attribute table. <br>
+		A total of 1,225 sub-aerial beaches were identified in Puerto Rico mainland, Vieques and Culebra island-municipalities, <br>
+		and Caja de Muertos Island. This beach inventory represents the first detailed geographic database of beaches in Puerto Rico, which can be updated and <br>
+		could serve to monitor morphological changes and data relevant to coastal studies.
+		</p>
+		
+		<p> <b> Zoom in </b> to any of the arrow markers of beast beaches and you will see golden-colored polygons representing the boundaries of sub-aerial beaches. <br>
+		These can be found throughout the coast of Puerto Rico and municipality-islands. <b> Click the markers and polygons </b> to find out more about each of them.
+		</p>
+		
+		<p id="notice"> <b> InfoWindows error </b> <br> </p>
+		<p>The info windows are not displaying the information as I set them up to. <br>
+		In the mean time, you can see how they should look <a href="https://goo.gl/HGmIwx">here</a>.
+		</p>
+		
+		<iframe width="900" height="500" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col0+from+1D8PWC3fm95dzacweHanm72heyaDo6GyNRhZZpVad&amp;viz=MAP&amp;h=false&amp;lat=18.53171719929446&amp;lng=-66.60048414348563&amp;t=1&amp;z=9&amp;l=col0&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>	
+				
+		
+		<p> <b> Note that </b> the digitization of beach structures was based on the interpretation of imagery that is not the one displayed in this map. <br>
+		Thus, the beach polygons may not match exactly the basemaps provided in the map, and may appear to be misplaced. That said, you will be able <br>
+		to have a glimpse of how dynamic the erosion and deposition of sediments can be. You will see that in most places the landward boundary matches <br>
+		the vegetation/man-made structure lines, but not the high-water line. This is because sand has been removed or added through natural processes. <br>
+		This change occurs constantly throughout the year, but some beaches <i>are</i> suffering erosion without recovery, <br>
+		especially in areas with adjacent human develompent.
+		</p>
+		
+		<p> I chose to display this shapefile for our Deep Dive 1 to learn how to integrate spatial data using Google Fusion Tables <br>
+		on Google API maps. In this map I used a hybrid basemap, so that the audience can visualize the beach systems through the satellite image, <br>
+		and also be able to see the road network and places of interest near them. This map also includes the markers created for <a href="map_m4.html">Milestone 4</a>, <br>
+		as well as a few additional beach locations, to show some of the best beaches in the Island vis a vis beach boundaries from the inventory. 
+		</p>
+		
+		<img src="img/gjvg_pr.jpg" alt="San Juan, PR" style="width:800px;height:400px;">
+				
+		<script src="js/deepdive_1_tria3.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initialize&key=AIzaSyC_NzyS26gMjp7Ei3uy5vdL1ulEQKri9Vo">
+    	</script>
+	</body>
+</html>
