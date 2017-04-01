@@ -7,7 +7,7 @@ var myMap = new ol.Map({
 //	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-109.045187,36.998980]),
-		zoom: 20
+		zoom: 6
 	})
 });
 
@@ -21,7 +21,7 @@ var Layer_Stamen_terrain = new ol.layer.Group({
 
 function setMapType(newType) {
     if(newType == 'STAMEN_terrain') {
-        map.setLayerGroup(Layer_Stamen_terrain);
+        myMap.setLayerGroup(Layer_Stamen_terrain);
     }
 }
 
