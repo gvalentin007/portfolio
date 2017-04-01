@@ -34,7 +34,7 @@ a:hover{
   border: 1px solid black
 }
 #nav_wrapper{
-	width: 960px;
+	width: auto;
 	text-align: left;
 }
 #nav ul{
