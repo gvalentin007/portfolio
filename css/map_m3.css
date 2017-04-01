@@ -20,10 +20,11 @@ body {
 }
 	
 #map_canvas { 
-	width:90%; 
-	height:80%; 
+	width:1400px; 
+	height:600px; 
 	margin-left:auto; 
-	margin-right: auto
+	margin-right: auto;
+	margin-bottom: 50px
 }
 	
 .infoBox { 
