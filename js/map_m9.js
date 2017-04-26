@@ -113,3 +113,4 @@ var myMap = new ol.Map({
 
 
 //KML layers source: https://www.census.gov/geo/maps-data/data/kml/kml_blkgrp.html
+//Geology layers sources: https://mrdata.usgs.gov/geology/state/
