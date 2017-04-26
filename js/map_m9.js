@@ -1,5 +1,8 @@
+//PROJECTIONva
+
 var projection = ol.proj.get('EPSG:3857');
 
+//STYLES
 var stroke = new ol.style.Stroke({color: 'black', width: 2});
 var fill = new ol.style.Fill({color: 'red'});
 
@@ -14,6 +17,8 @@ var volcanostyle = new ol.style.Style({
           })
         })
 		
+
+//GEOMETRIES
 //COORDS
 var vallescalderaCoord = [-106.529373, 35.905258]
 var capulinCoord = [-103.970263,36.782375]
@@ -55,7 +60,7 @@ var blackrockFeature = new ol.Feature({
 	geometry: blackrockPoint
 })
 
-//GEOMETRIES OF CUSTOM GEOMETRIES
+//LAYER OBJECTS
 
 var volcanoes_geoms = new ol.layer.Vector({
 	source: new ol.source.Vector({
@@ -64,6 +69,13 @@ var volcanoes_geoms = new ol.layer.Vector({
 	style: volcanostyle
 })
 
+var blocks_kml = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		url: 'https://s3.amazonaws.com/kkb-web/data/tl_2010_35001_tabblock10.kml',
+		projection: projection,
+		format: new ol.format.KML()
+	})
+})
 
 //BASEMAP
 var Layer_Stamen_terrain = new ol.layer.Group({
@@ -79,7 +91,8 @@ var myMap = new ol.Map({
 	target: 'map_canvas',
 	layers: [
 		Layer_Stamen_terrain,
-		volcanoes_geoms
+		volcanoes_geoms,
+		blocks_kml
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-109.045187,36.998980]),
