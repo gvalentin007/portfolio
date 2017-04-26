@@ -110,3 +110,6 @@ var myMap = new ol.Map({
 //geomlayers
 //set layers on map
 //See example code here: https://github.com/karlbenedict/GEOG485-585/blob/master/sample-files/OpenLayers/js/OpenLayers_04_vector.js
+
+
+//KML layers source: https://www.census.gov/geo/maps-data/data/kml/kml_blkgrp.html
