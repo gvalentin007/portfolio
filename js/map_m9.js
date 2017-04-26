@@ -69,9 +69,9 @@ var volcanoes_geoms = new ol.layer.Vector({
 	style: volcanostyle
 })
 
-var blocks_kml = new ol.layer.Vector({
+var azgeol_kml = new ol.layer.Vector({
 	source: new ol.source.Vector({
-		url: 'https://s3.amazonaws.com/kkb-web/data/tl_2010_35001_tabblock10.kml',
+		url: 'https://github.com/gvalentin007/portfolio/blob/master/kml/azgeol_poly_dd.kml',
 		projection: projection,
 		format: new ol.format.KML()
 	})
@@ -92,7 +92,7 @@ var myMap = new ol.Map({
 	layers: [
 		Layer_Stamen_terrain,
 		volcanoes_geoms,
-		blocks_kml
+		azgeol_kml
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-109.045187,36.998980]),
