@@ -69,16 +69,47 @@ var volcanoes_geoms = new ol.layer.Vector({
 	style: volcanostyle
 })
 
-var azgeol_kml = new ol.layer.Vector({
+       // KML -> Converted shp to kml and saved on kml folder at GitHub, then created layer name and pasted link to kml as seen below. 
+var azfaults_kml = new ol.layer.Vector({
 	source: new ol.source.Vector({
-		url: 'https://gvalentin007.github.io/portfolio/kml/azgeol_poly_dd.kml',
+		url: 'https://gvalentin007.github.io/portfolio/kml/azfaults_dd.kml',
+		projection: projection,
+		format: new ol.format.KML()
+	})
+})
+
+var utfaults_kml = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		url: 'https://gvalentin007.github.io/portfolio/kml/utfaults_dd.kml',
 		projection: projection,
 		format: new ol.format.KML()
 	})
 })
 
 
+      //WMS -> Found WMS service at USGS website (https://mrdata.usgs.gov/geology/state/state.php?state=NM) and downloaded file (https://mrdata.usgs.gov/services/nm?service=WMS&version=1.1.1&request=GetCapabilities&) 
+	  //Substituted var name, attributions html, params, and url below, using info on the GetCapabilities file.  
+var New_Mexico_Faults = new ol.layer.Tile({
+	source: new ol.source.TileWMS({
+		attributions: new ol.Attribution({
+			html: 'U.S. Geological Survey Mineral Resources Program'
+		}),
+		params: {'LAYERS':'New_Mexico_Faults','FORMAT':'image/png','TRANSPARENT':'true'},
+		url: 'https://mrdata.usgs.gov/services/nm?',
+		projection: projection
+	})
+})
 
+var Colorado_Faults = new ol.layer.Tile({
+	source: new ol.source.TileWMS({
+		attributions: new ol.Attribution({
+			html: 'U.S. Geological Survey Mineral Resources Program'
+		}),
+		params: {'LAYERS':'Colorado_Faults','FORMAT':'image/png','TRANSPARENT':'true'},
+		url: 'https://mrdata.usgs.gov/services/co?',
+		projection: projection
+	})
+})
 
 
 
@@ -97,8 +128,11 @@ var myMap = new ol.Map({
 	target: 'map_canvas',
 	layers: [
 		Layer_Stamen_terrain,
-		volcanoes_geoms,
-		azgeol_kml
+		New_Mexico_Faults,
+		Colorado_Faults,
+		azfaults_kml,
+		utfaults_kml,
+		volcanoes_geoms
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-109.045187,36.998980]),
