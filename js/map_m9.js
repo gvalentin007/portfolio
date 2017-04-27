@@ -69,7 +69,7 @@ var volcanoes_geoms = new ol.layer.Vector({
 	style: volcanostyle
 })
 
-var blocks1_kml = new ol.layer.Vector({
+var blocksa_kml = new ol.layer.Vector({
 	source: new ol.source.Vector({
 		url: 'https://github.com/gvalentin007/portfolio/blob/master/kml/cb_2016_04_bg_500k.kml',
 		projection: projection,
@@ -92,7 +92,7 @@ var myMap = new ol.Map({
 	layers: [
 		Layer_Stamen_terrain,
 		volcanoes_geoms,
-		blocks1_kml
+		blocksa_kml
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-109.045187,36.998980]),
