@@ -1,15 +1,46 @@
-//PROJECTIONva
+//PROJECTION
 
 var projection = ol.proj.get('EPSG:3857');
 
 //STYLES
-var stroke = new ol.style.Stroke({color: 'black', width: 2});
-var fill = new ol.style.Fill({color: 'red'});
 
-var volcanostyle = new ol.style.Style({
+var stroke_black = new ol.style.Stroke({color: 'black', width: 2});
+var fill_red = new ol.style.Fill({color: 'red'});
+var fill_blue = new ol.style.Fill({color: 'blue'});
+var fill_green = new ol.style.Fill({color: 'green'});
+var fill_orange = new ol.style.Fill({color: 'orange'});
+var fill_yellow = new ol.style.Fill({color: 'yellow'});
+var fill_purple = new ol.style.Fill({color: 'purple'});
+
+	//KML Fault style
+var line_black = new ol.style.Stroke({color: 'black'});
+
+var style_red = new ol.style.Style({
           image: new ol.style.RegularShape({
-            fill: fill,
-            stroke: stroke,
+            fill: fill_red,
+            stroke: stroke_black,
+            points: 3,
+            radius: 10,
+            rotation: Math.PI / 4,
+            angle: 0
+          })
+        })
+
+var style_blue = new ol.style.Style({
+          image: new ol.style.RegularShape({
+            fill: fill_blue,
+            stroke: stroke_black,
+            points: 3,
+            radius: 10,
+            rotation: Math.PI / 4,
+            angle: 0
+          })
+        })		
+
+var style_green = new ol.style.Style({
+          image: new ol.style.RegularShape({
+            fill: fill_green,
+            stroke: stroke_black,
             points: 3,
             radius: 10,
             rotation: Math.PI / 4,
@@ -17,9 +48,49 @@ var volcanostyle = new ol.style.Style({
           })
         })
 		
+var style_orange = new ol.style.Style({
+          image: new ol.style.RegularShape({
+            fill: fill_orange,
+            stroke: stroke_black,
+            points: 3,
+            radius: 10,
+            rotation: Math.PI / 4,
+            angle: 0
+          })
+        })
+		
+var style_yellow = new ol.style.Style({
+          image: new ol.style.RegularShape({
+            fill: fill_yellow,
+            stroke: stroke_black,
+            points: 3,
+            radius: 10,
+            rotation: Math.PI / 4,
+            angle: 0
+          })
+        })
 
+var style_purple = new ol.style.Style({
+          image: new ol.style.RegularShape({
+            fill: fill_purple,
+            stroke: stroke_black,
+            points: 3,
+            radius: 10,
+            rotation: Math.PI / 4,
+            angle: 0
+          })
+        })
+		
+var fault_style = new ol.style.Style({
+	stroke: new ol.style.Stroke({
+	  color: line_black,
+	  width: 2
+	}),
+});
+		
 //GEOMETRIES
 //COORDS
+
 var vallescalderaCoord = [-106.529373, 35.905258]
 var capulinCoord = [-103.970263,36.782375]
 var sunsetCoord = [-111.503089, 35.363819]
@@ -28,6 +99,7 @@ var dotseroCoord = [-107.035134,39.660442]
 var blackrockCoord = [-112.485088,38.806087]
 
 //POINTS
+
 var vallescalderaPoint = new ol.geom.Point(ol.proj.fromLonLat(vallescalderaCoord, projection));
 var capulinPoint = new ol.geom.Point(ol.proj.fromLonLat(capulinCoord, projection));
 var sunsetPoint = new ol.geom.Point(ol.proj.fromLonLat(sunsetCoord, projection));
@@ -36,6 +108,7 @@ var dotseroPoint = new ol.geom.Point(ol.proj.fromLonLat(dotseroCoord, projection
 var blackrockPoint = new ol.geom.Point(ol.proj.fromLonLat(blackrockCoord, projection));
 
 //FEATURES
+
 var vallescalderaFeature = new ol.Feature({
 	geometry: vallescalderaPoint
 })
@@ -62,14 +135,50 @@ var blackrockFeature = new ol.Feature({
 
 //LAYER OBJECTS
 
-var volcanoes_geoms = new ol.layer.Vector({
+var vallescaldera_layer = new ol.layer.Vector({
 	source: new ol.source.Vector({
-		features: [vallescalderaFeature,capulinFeature,sunsetFeature,spFeature,dotseroFeature,blackrockFeature]
+		features: [vallescalderaFeature]
 	}),
-	style: volcanostyle
+	style: style_red
+})
+
+var capulin_layer = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		features: [capulinFeature]
+	}),
+	style: style_blue
+})
+
+var sunset_layer = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		features: [sunsetFeature]
+	}),
+	style: style_green
+})
+
+var sp_layer = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		features: [spFeature]
+	}),
+	style: style_orange
+})
+
+var dotsero_layer = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		features: [dotseroFeature]
+	}),
+	style: style_yellow
+})
+
+var blackrock_layer = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		features: [blackrockFeature]
+	}),
+	style: style_purple
 })
 
        // KML -> Converted shp to kml and saved on kml folder at GitHub, then created layer name and pasted link to kml as seen below. 
+	   
 var azfaults_kml = new ol.layer.Vector({
 	source: new ol.source.Vector({
 		url: 'https://gvalentin007.github.io/portfolio/kml/azfaults_dd.kml',
@@ -82,13 +191,16 @@ var utfaults_kml = new ol.layer.Vector({
 	source: new ol.source.Vector({
 		url: 'https://gvalentin007.github.io/portfolio/kml/utfaults_dd.kml',
 		projection: projection,
-		format: new ol.format.KML()
+		format: new ol.format.KML({
+			extractStyles:false
+		})
 	})
 })
 
 
       //WMS -> Found WMS service at USGS website (https://mrdata.usgs.gov/geology/state/state.php?state=NM) and downloaded file (https://mrdata.usgs.gov/services/nm?service=WMS&version=1.1.1&request=GetCapabilities&) 
-	  //Substituted var name, attributions html, params, and url below, using info on the GetCapabilities file.  
+	  //Substituted var name, attributions html, params, and url below, using info on the GetCapabilities file. 
+	  
 var New_Mexico_Faults = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		attributions: new ol.Attribution({
@@ -115,6 +227,7 @@ var Colorado_Faults = new ol.layer.Tile({
 
 
 //BASEMAP
+
 var Layer_Stamen_terrain = new ol.layer.Group({
     layers: [
         new ol.layer.Tile({
@@ -124,6 +237,7 @@ var Layer_Stamen_terrain = new ol.layer.Group({
 });
 
 //MAP
+
 var myMap = new ol.Map({
 	target: 'map_canvas',
 	layers: [
@@ -132,7 +246,12 @@ var myMap = new ol.Map({
 		Colorado_Faults,
 		azfaults_kml,
 		utfaults_kml,
-		volcanoes_geoms
+		vallescaldera_layer,
+		capulin_layer,
+		sunset_layer,
+		sp_layer,
+		dotsero_layer,
+		blackrock_layer	
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-109.045187,36.998980]),
