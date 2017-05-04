@@ -84,7 +84,7 @@ var style_purple = new ol.style.Style({
 var fault_style = new ol.style.Style({
 	stroke: new ol.style.Stroke({
 	  color: line_black,
-	  width: 2
+	  width: 1
 	}),
 });
 		
@@ -183,8 +183,11 @@ var azfaults_kml = new ol.layer.Vector({
 	source: new ol.source.Vector({
 		url: 'https://gvalentin007.github.io/portfolio/kml/azfaults_dd.kml',
 		projection: projection,
-		format: new ol.format.KML()
-	})
+		format: new ol.format.KML({
+			extractStyles:false
+		})
+	}),
+	style: fault_style
 })
 
 var utfaults_kml = new ol.layer.Vector({
@@ -194,7 +197,8 @@ var utfaults_kml = new ol.layer.Vector({
 		format: new ol.format.KML({
 			extractStyles:false
 		})
-	})
+	}),
+	style: fault_style
 })
 
 
