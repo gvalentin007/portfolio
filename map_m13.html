@@ -7,7 +7,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.0.1/ol.js"></script>
 		
 	</head>
-
+	
+	
 	<body>
 		<h2>Milestone 13</h2>
 		<h1>Fire History in Northern New Mexico</h1>
@@ -38,32 +39,47 @@
 		<p> You can zoom out to view the data presented for all of New Mexico.
 		</p>
 			
+		<div id="map_container">
+			<!--Div1-->
 			
-		<div id="map_canvas"></div>
+			<div id="map_canvas"></div>
+			
+		    <!--Div2-->
+			<div id="ruler">
+			<form class="form-inline">
+				<label>Measurement type &nbsp;</label>
+					<select id="type">
+						<option value="length">Length (LineString)</option>
+						<option value="area">Area (Polygon)</option>
+					</select>
+				<label class="checkbox">
+					<input type="checkbox" id="geodesic">
+					use geodesic measures
+				</label>
+			</form>
+			</div>
+			
+			<!--Div3-->
+			<div id="legend">
+			<img src="img/gjvg_M13_Legend3.jpg" alt="M13 Legend" style="width:280px;height:198px;">
+			<p>
+			<a href="M13_legend3.html">[Enlarge Legend]</a>
+			</p>
+			</div>
+				
+		</div>
 		
-		<!--Legend with roads
-		<p>
-		<img src="img/gjvg_M13_Legend1.JPG" alt="M13 Legend" style="width:280px;height:198px;"> <br>
-		<p><a href="M13_legend1.html">[Enlarge]</a></p>
-		</p>
-		-->
 		
-		<!--Legend with roads-->
-		<p>
-		<img src="img/gjvg_M13_Legend2.JPG" alt="M13 Legend" style="width:280px;height:198px;"> <br>
-		<p><a href="M13_legend2.html">[Enlarge]</a></p>
-		</p>
-		
-		
+			
 		<!--Photo-->
 		
-		<img src="img/gjvg_burn.JPG" alt="Bandelier National Monument, NM" style="width:800px;height:500px;">
+		<img src="img/gjvg_burn.jpg" alt="Bandelier National Monument, NM" style="width:800px;height:500px;">
 		<p> View of trees burned by the Las Conchas fire in 2011, at Bandelier National Monument, New Mexico. <br>
 		Photo by: GValentin
 		</p>
 		
-		<script src="js/map_m13.js" type="text/javascript"></script>
-		<script async="" defer="" src="">
+	<script src="js/map_m13.js" type="text/javascript"></script>
+	<script async="" defer="" src="">
 		
 	</body>
 </html>
