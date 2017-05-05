@@ -1,0 +1,72 @@
+html { 
+	height: 100% }
+
+body { 
+	font-family: "Veranda", sans-serif;
+  	background: turquoise;
+ 	background: -webkit-linear-gradient(left, #52bcb1, white);
+ 	background: -o-linear-gradient(right, #52bcb1, white);
+ 	background: -moz-linear-gradient(right, #52bcb1, white);
+ 	background: linear-gradient(to right, #52bcb1, white);
+  
+	padding-top: 30px;
+ 	padding-right: 30px;
+  	padding-bottom: 30px;
+ 	padding-left: 30px;
+	
+	height: 100%; 
+	color: black;
+	text-align: center
+}
+	
+#map_canvas { 
+	width:1400px; 
+	height:600px; 
+	margin-left:auto; 
+	margin-right: auto;
+	margin-bottom: 50px
+}
+	
+.infoBox { 
+	color:black
+}
+
+a:link {
+    color: #323e5d;
+}
+a:visited {
+  color: #604270
+}
+
+      .tooltip {
+        position: relative;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        color: white;
+        padding: 4px 8px;
+        opacity: 0.7;
+        white-space: nowrap;
+      }
+      .tooltip-measure {
+        opacity: 1;
+        font-weight: bold;
+      }
+      .tooltip-static {
+        background-color: #ffcc33;
+        color: black;
+        border: 1px solid white;
+      }
+      .tooltip-measure:before,
+      .tooltip-static:before {
+        border-top: 6px solid rgba(0, 0, 0, 0.5);
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        margin-left: -7px;
+        left: 50%;
+      }
+      .tooltip-static:before {
+        border-top-color: #ffcc33;
+      } 
