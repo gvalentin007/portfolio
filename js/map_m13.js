@@ -4,23 +4,6 @@
 
 var projection = ol.proj.get('EPSG:3857');
 
-//STYLES
-
-var stroke_black = new ol.style.Stroke({color: 'black', width: 2});
-var fill_red = new ol.style.Fill({color: 'red'});
-
-
-var style_red = new ol.style.Style({
-          image: new ol.style.RegularShape({
-            fill: fill_red,
-            stroke: stroke_black,
-            points: 3,
-            radius: 10,
-            rotation: Math.PI / 4,
-            angle: 0
-          })
-        })
-
 
 //LAYER OBJECTS - WMSs from http://mapper.internetmapping.net (Class GeoServer)
 
