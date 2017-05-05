@@ -18,13 +18,42 @@ body {
 	color: black;
 	text-align: center
 }
-	
+
+#map_container {
+	position: relative;
+	margin-left:30px; 
+	margin-right:30px;
+	margin-bottom:30px;
+	margin-top:30px
+}
 #map_canvas { 
 	width:1400px; 
-	height:600px; 
+	height:600px;
 	margin-left:auto; 
-	margin-right: auto;
-	margin-bottom: 50px
+	margin-right:auto;
+	margin-bottom:10px;
+	margin-top:10px;
+	position:albsolute;
+	z-index:0
+	
+}
+
+#ruler {
+	position:albsolute;
+	margin-left:auto; 
+	margin-right:auto;
+	margin-bottom:20px;
+	margin-top:2px;
+	z-index:1
+}
+
+#legend {
+	position:albsolute;
+	margin-left:auto; 
+	margin-right:auto;
+	margin-bottom:10px;
+	margin-top:2px;
+	z-index:1
 }
 	
 .infoBox { 
