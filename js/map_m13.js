@@ -99,6 +99,21 @@ var NMbridges = new ol.layer.Tile({
 	})
 })
 
+var NMbridges_fire = new ol.layer.Tile({
+	source: new ol.source.TileWMS({
+		attributions: new ol.Attribution({
+			html: 'RGIS, New Mexico'
+		}),
+		params: {'LAYERS':'gvalentin_workspace:gv_nbi_nm_fire','TRANSPARENT':'true'},
+		url: 'http://mapper.internetmapping.net:8081/geoserver/ows?SERVICE=WMS&',
+		serverType: 'geoserver',
+		projection: projection,
+		format: new ol.format.KML({
+			extractStyles:false
+		})
+	})
+})
+
 var NMPopAreas = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		attributions: new ol.Attribution({
@@ -113,6 +128,22 @@ var NMPopAreas = new ol.layer.Tile({
 		})
 	})
 })
+
+var NMPopAreas_Fire = new ol.layer.Tile({
+	source: new ol.source.TileWMS({
+		attributions: new ol.Attribution({
+			html: 'RGIS, New Mexico'
+		}),
+		params: {'LAYERS':'gvalentin_workspace:gv_GNIS_PopulatedPlaces_2016_fire3km','TRANSPARENT':'true'},
+		url: 'http://mapper.internetmapping.net:8081/geoserver/ows?SERVICE=WMS&',
+		serverType: 'geoserver',
+		projection: projection,
+		format: new ol.format.KML({
+			extractStyles:false
+		})
+	})
+})
+
 
 //BASEMAP
 
@@ -131,15 +162,17 @@ var myMap = new ol.Map({
 	target: 'map_canvas',
 	layers: [
 		OSM_basemap,
+		//NMroads,
 		NativeAmericanArea,
 		FireHistoryNM,
-		//NMcounties
-		//NMroads
-		//NMbridges
-		//NMPopAreas
+		NMcounties,
+		//NMbridges,
+		NMbridges_fire,
+		//NMPopAreas,
+		NMPopAreas_Fire
 	],
 	view: new ol.View({
-		center: ol.proj.fromLonLat([-106.026031, 35.681683]),
+		center: ol.proj.fromLonLat([-106.014260, 36.034214]),
 		zoom: 8
 	}),
 	controls: ol.control.defaults().extend([
