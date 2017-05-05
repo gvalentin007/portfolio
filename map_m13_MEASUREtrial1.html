@@ -39,36 +39,38 @@
 		<p> You can zoom out to view the data presented for all of New Mexico.
 		</p>
 			
+		<div id="map_container">
+			<!--Div1-->
 			
-		<div id="map_canvas"></div>
-		<form class="form-inline">
-			<label>Measurement type &nbsp;</label>
-				<select id="type">
-					<option value="length">Length (LineString)</option>
-					<option value="area">Area (Polygon)</option>
-				</select>
-			<label class="checkbox">
-				<input type="checkbox" id="geodesic">
-				use geodesic measures
-			</label>
-		</form>
+			<div id="map_canvas"></div>
+			
+		    <!--Div2-->
+			<div id="ruler">
+			<form class="form-inline">
+				<label>Measurement type &nbsp;</label>
+					<select id="type">
+						<option value="length">Length (LineString)</option>
+						<option value="area">Area (Polygon)</option>
+					</select>
+				<label class="checkbox">
+					<input type="checkbox" id="geodesic">
+					use geodesic measures
+				</label>
+			</form>
+			</div>
+			
+			<!--Div3-->
+			<div id="legend">
+			<img src="img/gjvg_M13_Legend3.jpg" alt="M13 Legend" style="width:280px;height:198px;">
+			<p>
+			<a href="M13_legend3.html">[Enlarge Legend]</a>
+			</p>
+			</div>
+				
+		</div>
 		
-		   
 		
-		<!--Legend with roads
-		<p>
-		<img src="img/gjvg_M13_Legend1.jpg" alt="M13 Legend" style="width:280px;height:198px;"> <br>
-		<p><a href="M13_legend1.html">[Enlarge]</a></p>
-		</p>
-		-->
-		
-		<!--Legend with roads-->
-		<p>
-		<img src="img/gjvg_M13_Legend2.jpg" alt="M13 Legend" style="width:280px;height:198px;"> <br>
-		<p><a href="M13_legend2.html">[Enlarge]</a></p>
-		</p>
-		
-		
+			
 		<!--Photo-->
 		
 		<img src="img/gjvg_burn.jpg" alt="Bandelier National Monument, NM" style="width:800px;height:500px;">
