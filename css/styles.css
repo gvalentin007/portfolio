@@ -31,11 +31,13 @@ a:hover{
   text-decoration: underline;
 }
 #nav{
-  border: 1px solid black
+  border: 1px solid black;
+ /* background:#dcdcdc */
 }
 #nav_wrapper{
 	width: auto;
-	text-align: left;
+	text-align: left
+	
 }
 #nav ul{
 	list-style-type: none;
