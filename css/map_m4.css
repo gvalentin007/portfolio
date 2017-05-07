@@ -34,3 +34,110 @@ a:visited {
     color: #604270;
   
 }
+
+/* Menu Container */
+
+.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Milestone Dropdown */
+
+.dropmm {
+    float: left;
+    overflow: hidden;
+}
+
+.dropmm .dropbtnmm {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.container a:hover, .dropmm:hover .dropbtnmm {
+    background-color: #a693c3;
+}
+
+.dropdown-contentmm {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-contentmm a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-contentmm a:hover {
+    background-color: #a693c3;
+}
+
+	
+/* Deep Dive Dropdown */
+
+.dropdd {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdd .dropbtndd {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.container a:hover, .dropdd:hover .dropbtndd {
+    background-color: #a693c3;
+}
+
+.dropdown-contentdd {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-contentdd a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-contentdd a:hover {
+    background-color: #a693c3;
+}
+
+.show {
+    display: block;
