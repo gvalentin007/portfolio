@@ -27,7 +27,7 @@ body {
 	margin-top:30px
 }
 #map_canvas { 
-	width:1400px; 
+	width:80%;  
 	height:600px;
 	margin-left:auto; 
 	margin-right:auto;
@@ -40,7 +40,7 @@ body {
 
 #ruler {
 	position:albsolute;
-	width:1400px; 
+	width:80%; 
 	margin-left:auto; 
 	margin-right:auto;
 	margin-bottom:20px;
